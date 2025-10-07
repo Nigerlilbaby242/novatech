@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novatech ICT Academy - Digital Learning & Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Custom animations and smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-animation {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                        Novatech ICT Academy
+                    </h1>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Home</a>
+                    <a href="#build-site" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Build a Site</a>
+                    <a href="#courses" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Courses</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Home</a>
+                <a href="#build-site" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Build a Site</a>
+                <a href="#courses" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Courses</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">About</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center gradient-bg pt-20">
+        <div class="container mx-auto px-4 py-20">
+            <div class="text-center text-white hero-animation">
+                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+                    <i class="fas fa-graduation-cap text-6xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"></i>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Welcome to Novatech ICT Academy
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    Empowering the next generation of digital creators through block programming and website development
+                </p>
+                <button onclick="scrollToSection('registration')" class="bg-white text-purple-600 px-8 py-4 rounded-full text-xl font-bold hover-scale shadow-lg">
+                    Join Now <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">What We Do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-lg card-hover bg-gradient-to-br from-purple-50 to-blue-50">
+                    <div class="w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-laptop-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Website Design</h3>
+                    <p class="text-gray-600">Create stunning, responsive websites that bring your ideas to life with modern design principles.</p>
+                </div>
+                
+                <div class="text-center p-8 rounded-lg card-hover bg-gradient-to-br from-blue-50 to-purple-50">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Programming</h3>
+                    <p class="text-gray-600">Learn programming fundamentals through interactive block coding and real-world projects. Through Google Meet.</p>
+                </div>
+                
+                <div class="text-center p-8 rounded-lg card-hover bg-gradient-to-br from-purple-50 to-blue-50">
+                    <div class="w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chalkboard-teacher text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Training</h3>
+                    <p class="text-gray-600">Comprehensive training programs designed to build your ICT skills from beginner to advanced. Through Google Meet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build a Site With Us Section -->
+    <section id="build-site" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-8 text-gray-800">Build a Site With Us</h2>
+                <p class="text-xl text-center mb-12 text-gray-600">
+                    Ready to bring your ideas online? Let us build a professional website for you!
+                </p>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <form id="website-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Your Name *</label>
+                                <input type="text" id="site-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Contact Email *</label>
+                                <input type="email" id="site-email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Type of Website *</label>
+                            <select id="site-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                                <option value="">Select website type</option>
+                                <option value="business">Business Website</option>
+                                <option value="portfolio">Portfolio</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="blog">Blog</option>
+                                <option value="landing">Landing Page</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Describe Your Idea *</label>
+                            <textarea id="site-description" rows="4" required placeholder="Tell us about your website idea, goals, and any specific features you need..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-bold text-lg hover-scale transition-all duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Courses</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Block Programming Course -->
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg p-8 card-hover">
+                    <div class="w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-puzzle-piece text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-center text-gray-800">Block Programming</h3>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Learn programming fundamentals through visual block coding. Perfect for beginners who want to understand logic and problem-solving without writing complex code. Age 7-14
+                    </p>
+                    <ul class="text-gray-600 mb-8 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Visual programming concepts</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Logic and problem solving</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Interactive projects</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Game development basics</li>                        
+                    </ul>
+                    <button onclick="scrollToSection('registration')" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-bold hover-scale transition-all duration-300">
+                        Register Now
+                    </button>
+                </div>
+                
+                <!-- Website Development Course -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8 card-hover">
+                    <div class="w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-globe text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-center text-gray-800">Website Development</h3>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Master the art of web development from scratch. Learn HTML, CSS, JavaScript, and modern web technologies to build stunning, responsive websites. Age 15 above
+                    </p>
+                    <ul class="text-gray-600 mb-8 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> HTML5 & CSS3 fundamentals</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Responsive design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> JavaScript programming</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Modern frameworks</li>
+                    </ul>
+                    <button onclick="scrollToSection('registration')" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-bold hover-scale transition-all duration-300">
+                        Register Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">About Novatech ICT Academy</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 text-gray-800">Our Mission</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            At Novatech ICT Academy, we believe that everyone should have access to quality digital education. Our mission is to empower individuals with the skills they need to thrive in the digital age.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            We specialize in making complex programming concepts accessible through innovative teaching methods, including block programming for beginners and comprehensive web development courses.
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg p-8">
+                        <div class="w-32 h-32 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-lightbulb text-white text-5xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-center text-gray-800">Innovation in Education</h4>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-8 shadow-lg">
+                    <h3 class="text-3xl font-bold mb-8 text-center text-gray-800">What We Teach</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Problem Solving</h4>
+                            <p class="text-gray-600 text-sm">Develop critical thinking and logical reasoning skills</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Programming</h4>
+                            <p class="text-gray-600 text-sm">Learn coding from basics to advanced concepts</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-rocket text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Digital Skills</h4>
+                            <p class="text-gray-600 text-sm">Master the tools needed for digital success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-8 text-gray-800">Student Registration</h2>
+                <p class="text-xl text-center mb-12 text-gray-600">
+                    Start your journey with us today!
+                </p>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg shadow-lg p-8">
+                    <form id="registration-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                            <input type="text" id="student-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="student-email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                            <input type="tel" id="student-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Course of Interest *</label>
+                            <select id="student-course" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                                <option value="">Select a course</option>
+                                <option value="Block Programming">Block Programming</option>
+                                <option value="Website Development">Website Development</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-bold text-lg hover-scale transition-all duration-300">
+                            <i class="fas fa-user-plus mr-2"></i>Register Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Get in Touch</h3>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Email</p>
+                                    <p class="text-gray-600">novatechictacademy@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fab fa-telegram text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Telegram</p>
+                                    <p class="text-gray-600">@NovatechAcademy</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Phone</p>
+                                    <p class="text-gray-600">+234 810 0869 2533</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center text-white hover-scale transition-all duration-300">
+                                    <i class="fab fa-telegram text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white hover-scale transition-all duration-300">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=2347084732633" class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center text-white hover-scale transition-all duration-300">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Send us a Message</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Your Name *</label>
+                                <input type="text" id="contact-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                                <input type="email" id="contact-email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Message *</label>
+                                <textarea id="contact-message" rows="4" required placeholder="How can we help you?" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-colors resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-bold hover-scale transition-all duration-300">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">Novatech ICT Academy</h3>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=2347084732633" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+                
+                <p class="text-gray-400">
+                    &copy; 2025 Novatech ICT Academy. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md mx-4">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-green-500 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-800">Success!</h3>
+                <p id="success-message" class="text-gray-600 mb-6"></p>
+                <button onclick="closeSuccessModal()" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-bold hover-scale transition-all duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+ // =========================
+// Novatech ICT Academy JS
+// =========================
+
+// --- Telegram Bot Configuration ---
+const TELEGRAM_BOT_TOKEN = '8209457694:AAFiYP_doyXLU6-oHF9C7XCLaRmcFtrQFb4'; // your bot token
+const TELEGRAM_CHAT_ID = '8041592682'; // your chat ID
+
+
+// --- Mobile menu toggle ---
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when link is clicked
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+}
+
+
+// --- Smooth scroll function ---
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+
+// --- Send message to Telegram ---
+async function sendToTelegram(message) {
+    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+    const params = {
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+        parse_mode: 'HTML'
+    };
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(params)
+        });
+        return await response.json();
+    } catch (error) {
+        console.error('Error sending to Telegram:', error);
+        return { ok: false, error: error.message };
+    }
+}
+
+
+// --- Handle form submission ---
+const form = document.getElementById('register-form');
+
+if (form) {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Get form input values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const course = document.getElementById('course').value.trim();
+
+        // Build message
+        const message = `
+📢 <b>New Student Registration!</b>
+👤 <b>Name:</b> ${name}
+📧 <b>Email:</b> ${email}
+💻 <b>Course:</b> ${course}
+🏫 <b>Academy:</b> Novatech ICT Academy
+`;
+
+        // Send to Telegram
+        const result = await sendToTelegram(message);
+
+        if (result.ok) {
+            alert('✅ Registration sent successfully!');
+            form.reset();
+        } else {
+            alert('❌ Failed to send registration. Please try again.');
+        }
+    });
+}
+
+        // Show success modal
+        function showSuccessModal(message) {
+            document.getElementById('success-message').textContent = message;
+            document.getElementById('success-modal').classList.remove('hidden');
+            document.getElementById('success-modal').classList.add('flex');
+        }
+
+        // Close success modal
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.getElementById('success-modal').classList.remove('flex');
+        }
+
+        // Handle website form submission
+        document.getElementById('website-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('site-name').value,
+                email: document.getElementById('site-email').value,
+                type: document.getElementById('site-type').value,
+                description: document.getElementById('site-description').value
+            };
+            
+            const message = `
+🌐 NEW WEBSITE REQUEST 🌐
+
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+🎯 Type: ${formData.type}
+📝 Description: ${formData.description}
+
+Time: ${new Date().toLocaleString()}
+            `;
+            
+            const result = await sendToTelegram(message);
+            
+            if (result.success) {
+                showSuccessModal('Your website request has been submitted successfully! We will contact you soon.');
+                document.getElementById('website-form').reset();
+            } else {
+                alert('Your website request has been submitted successfully! We will contact you soon.');
+            }
+        });
+
+        // Handle registration form submission
+        document.getElementById('registration-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('student-name').value,
+                email: document.getElementById('student-email').value,
+                phone: document.getElementById('student-phone').value,
+                course: document.getElementById('student-course').value
+            };
+            
+            const message = `
+🎓 NEW STUDENT REGISTRATION 🎓
+
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+📱 Phone: ${formData.phone}
+📚 Course: ${formData.course}
+
+Time: ${new Date().toLocaleString()}
+            `;
+            
+            const result = await sendToTelegram(message);
+            
+            if (result.success) {
+                showSuccessModal('Registration successful! We will contact you soon with course details.');
+                document.getElementById('registration-form').reset();
+            } else {
+                alert('Sorry, there was an error with your registration. Please try again.');
+            }
+        });
+
+        // Handle contact form submission
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                message: document.getElementById('contact-message').value
+            };
+            
+            const telegramMessage = `
+💬 NEW CONTACT MESSAGE 💬
+
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+📝 Message: ${formData.message}
+
+Time: ${new Date().toLocaleString()}
+            `;
+            
+            const result = await sendToTelegram(telegramMessage);
+            
+            if (result.success) {
+                showSuccessModal('Your message has been sent successfully! We will get back to you soon.');
+                document.getElementById('contact-form').reset();
+            } else {
+                alert('Sorry, there was an error sending your message. Please try again.');
+            }
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-hover').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('success-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'success-modal') {
+                closeSuccessModal();
+            }
+        });
+    </script>
+</body>
+</html>
